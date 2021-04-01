@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --tipo1: "Poppins", sans-serif;
+  --tipo2: "Poppins", sans-serif;
+  --fondo:#faf6ed;
+  --azul: #003a7b;
+  --naranja: #f7bc35;
+  --medio:#fbdf9c;
+  --pop: #00397bd0;;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  display: inline-flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+::selection {
+  background-color: var(--naranja);
+  color: var(--azul);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  background-color: var(--fondo);
+  font-size: 100%;
+  font-family: var(--tipo1);
+  color: var(--azul);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ESTO ES LA CABECERA */
+.header {
+  width: 100%;
+  padding: 0.5em 0;
+  background-color: var(--fondo);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  font-weight: 600;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.header .centrado {
+  width: 90%;
+  /* background-color: lightcoral; */
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: initial;
+}
+
+.header .h1 {
+  width: 4.5em;
+  /* background-color: lightcyan; */
+}
+
+header .logo:hover {
+  transform: scale(1.3);
+  transition: all 0.5s ease;
+}
+
+.header .fas {
+  font-size: 1.5em;
+  display: none;
+}
+
+header .nav {
+  /* background-color: red; */
+  display: none;
+}
+
+.header .ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: initial;
+}
+
+.header .li {
+  margin: 0 0 0 1em;
+}
+
+/* .header .proyectos{
+  background-color: hotpink;
+
+} */
+header .a:hover {
+  color: var(--naranja);
+}
+
+/* ESTO ES EL CUERPO */
+.main {
+  /* background-color: khaki; */
+  margin: 5em 0;
+  position: relative;
+  z-index: 1;
+}
+
+.main .centrado {
+  width: 90%;
+  /* background-color: lawngreen; */
+  margin: auto;
+  animation: aparecer1 4s ease 1 both;
+}
+
+.main .trabajos {
+  padding: 3em 0;
+  text-align: center;
+  /* background-color: violet; */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: initial;
+  align-items: center;
+}
+
+.main .titulo {
+  margin: 1em auto;
+  font-weight: 500;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.main .grid {
+  width: 100%;
+  margin: 1em 0 0;
+  /* background-color: yellow; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.main .article {
+  width: 60%;
+  margin: auto;
+  /* background-color: lightskyblue; */
+  position: relative;
+}
+
+.main .img {
+  border-radius: 5%;
+  border: var(--naranja) 0.2em solid;
+}
+
+.main .article .overlay {
+  width: 100%;
+  height: 100%;
+  background: var(--blanco-alpha);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--blanco);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
+.trabajos .article:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.lightbox{
+  width:100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  z-index: 4;
+  
+  
+  background-color:var(--pop);
+  
+  display:flex; 
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+
+  color:white;
+
+  display: none;
+}
+
+.lightbox .limi{
+  width: 30%;
+  margin: 1em;
+
+}
+.lightbox.ver{
+  display: flex;
+}
+.lightbox .fa-times{
+  font-size: 2em;
+  cursor: pointer;
+}
+.lightbox img{
+  max-width: 900px;
+}
+
+
+
+
+
+
+/* ESTO ES EL PIES */
+.footer {
+  width: 100%;
+  background-color: var(--fondo);
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  font-weight: 600;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.footer .centrado {
+  width: 90%;
+  /* background-color: lightpink; */
+  margin: 1em auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .mi:hover {
+  color: var(--naranja);
+}
+
+/* .footer .social{} */
+.footer .rrss {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer .red-social {
+  margin: 0 1em;
+  font-size: 1em;
+}
+
+.footer .red-social:hover {
+  color: var(--naranja);
+}
+
+.footer .contacto:hover {
+  color: var(--naranja);
+}
+
+/* ESTO ES RESPONSIVE */
+@media screen and (max-width: 915px) {
+  .header .proyectos {
+    display: none;
+  }
+
+  .header .fas {
+    display: flex;
+    /* font-size: 2em; */
+  }
+
+  .header .centrado {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: initial;
+  }
+
+
+  .header .nav {
+    /* background-color: aliceblue; */
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: initial;
+    background-color: var(--fondo);
+    display: none;
+  }
+
+  .header .nav.ver {
+    display: flex;
+  }
+
+  .header .ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+    margin: 1.5em 0;
+  }
+
+  .header .li {
+    width: 100%;
+    margin: 1.5em 0;
+  }
+
+  .main .centrado {
+    /* background-color: red; */
+    width: 100%;
+  }
+
+  .main .trabajos {
+    width: 100%;
+    /* background-color: lightseagreen; */
+  }
+
+  .main .titulo {
+    width: 100%;
+    /* background-color: lightcoral; */
+    font-size: 1.5em;
+  }
+
+  .trabajos .grid {
+    width: 100%;
+    margin: 1em 0 0;
+    /* background-color: yellow; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  .lightbox .limi{
+    width: 80%;
+    margin: 1em;
+  
+  }
+
+  .footer {
+    display: none;
+  }
+}
+@keyframes aparecer1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --tipo1: "Poppins", sans-serif;
+    --tipo2: "Poppins", sans-serif;
+
+    --fondo:#faf6ed;
+    --azul: #003a7b;
+    --naranja: #f7bc35;
+    --medio:#fbdf9c;
+  }
+  
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  p a {
+    display: inline-flex;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  ::selection {
+    background-color: var(--naranja);
+    color: var(--azul);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    height: 100%;
+    background-color: var(--fondo);
+    font-size: 100%;
+    font-family: var(--tipo1);
+    color: var(--azul);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+/* ESTO ES LA CABECERA */
+
+  .header{
+    width: 100%;
+    padding: .5em 0;
+        
+    background-color:var(--fondo);
+  
+    position: fixed;
+    z-index: 2;
+    top: 0;
+  
+    font-weight: 600;
+    font-size: 1.3em;
+    text-transform: uppercase;
+  
+  }
+  
+  .header .centrado{
+    width: 90%;
+   
+    /* background-color: lightcoral; */
+    margin: auto;
+  
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items:center;
+    align-content: initial;
+  
+  
+  }
+  
+  .header .h1{
+    width: 4.5em;
+    /* background-color: lightcyan; */
+  
+  } 
+  header .logo:hover{
+  
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3)
+  }
+  
+  
+  .header .fas{
+    font-size: 1.3em;
+    
+    display: none;
+  
+  }
+  
+  header .nav{
+    /* background-color: red; */
+    display: none;
+  }
+  
+  .header .ul{
+  
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items:center;
+    align-content: initial;
+  
+  }
+  
+  .header .li{
+    margin: 0 0 0 1em;
+  }
+  
+  /* .header .proyectos{
+    background-color: hotpink;
+    
+  } */
+  
+  header .a:hover{
+    color: var(--naranja);
+  
+  }
+  
+
+
+
+
+/* ESTO ES EL CUERPO */
+
+
+  .main{
+      width: 100%;
+      min-height:100vh;
+      /* background-color: rgb(32, 34, 178); */
+
+      position: relative;
+      z-index:1;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: initial;
+
+      font-weight: 500;
+      font-size: 1.5em;
+      
+
+    
+  }
+
+
+  .main .centrado{
+    width: 90%;
+    margin: auto;
+    /* background-color: hotpink; */
+    
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+
+    animation: aparecer1 3s ease 1 both;
+
+    
+
+  }
+
+  .main .info{
+      width: 70%;
+      height: 15em;
+      /* background-color:lightblue; */
+      margin: auto;
+
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: initial;
+      align-content: center;
+
+
+  }
+
+
+  .main .apartado{
+    width: 100%;
+    /* background-color: lavenderblush; */
+    padding: 1.5em;
+    margin:auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: initial;
+    
+  }
+
+
+  .main .rrss{
+    width: 20%;
+    /* background-color: lavenderblush; */
+    margin-left: 2.2em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: initial;
+  }
+
+  .main .red-social{
+    margin: 0 2em 0 0;
+  }
+
+  
+
+  .main .p1{
+    margin: 0 3em 0 0;
+    font-weight: 600;
+  }
+
+  .main .p2{
+    margin: 0 4em 0 0;
+    font-weight: 600;
+  }
+
+  .main .p{
+    font-weight: 600;
+  }
+
+  .main .a{
+    font-size: 1.3em;
+  }
+
+  .main .a:hover{
+    color: var(--naranja);
+  }
+
+
+  
+ 
+
+
+
+  /* ESTO ES EL PIE */
+
+.footer{
+    width: 100%;
+
+    
+    /* background-color: lightgreen; */
+
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+
+    font-weight: 600;
+    font-size: 1.3em;
+    text-transform: uppercase;
+
+
+}
+
+.footer .centrado{
+    width: 90%;
+    /* background-color: lightpink; */
+    margin: 1em auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer .mi:hover{
+    color: var(--naranja);
+  }
+
+.footer .red-social:hover{
+  color: var(--naranja);
+}
+.footer .contacto:hover{
+    color: var(--naranja);
+  
+  }
+
+ 
+
+  @media screen and (max-width:915px){
+
+    
+
+    .header .proyectos{
+      display: none;
+    }
+   
+    .header .fas{
+      display: flex;
+      /* font-size: 2em; */
+        
+    }
+    .header .centrado{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: initial;
+    }
+
+    .header .nav{
+      /* background-color: aliceblue; */
+      width: 100%;
+      height: 90vh;
+      
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: initial;
+
+      background-color: var(--fondo);
+
+      display: none;
+
+    
+    }
+    .header .nav.ver{
+      display: flex;
+
+    }
+
+    .header .ul{
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: initial;
+      margin: 1.5em 0;
+      
+    }
+
+    .header .li{
+      width: 100%;
+      margin: 1.5em 0;
+    }
+
+
+
+   .main .centrado{
+     width:100%;
+   }
+
+   .main .info{
+     width:100%; 
+
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: center;
+     align-items: center;
+     align-content: initial;
+
+
+   }
+
+   .main .apartado{
+     width: 100%;
+     
+
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: center;
+     align-items: center;
+     align-content: initial;
+
+     font-size: .8em;
+   }
+
+   .main .p1{
+      margin: .2em auto;
+
+   }
+    
+   .main .p2{
+    margin: auto;
+
+  }
+  .main .p{
+     margin: auto;
+
+  }
+  .main .rrss{
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: initial;
+
+
+  }
+  .main .red-social{
+    margin:auto;
+  }
+
+  .main .correo{
+    font-size: .9em;
+  }
+  
+
+  .footer{
+    display:none;
+  }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+  .main .centrado{
+    /* background-color: lightcoral; */
+    width: 100%;
+    
+    font-size: 1.3em;
+
+
+    
+  }
+
+
+@keyframes aparecer1{
+  from{
+    
+    opacity: 0;
+}
+  to{
+    
+    opacity: 1;
+} 
+
+}
+}
